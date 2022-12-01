@@ -1,0 +1,427 @@
+/* 設定 */
+html {
+    scroll-behavior : smooth;
+}
+* {
+    margin  : 0;
+    padding : 0;
+}
+body {
+    background : linear-gradient(to right, rgb(111, 178, 255), rgb(255, 255, 255));
+}
+section {
+    margin : 3rem auto;
+}
+ul {
+    list-style : none;
+}
+a {
+    text-decoration : none;
+}
+.none {
+    display : none;
+}
+.transition {
+    transition : 1s;
+}
+.wrapper {
+    max-width : 1200px;
+    margin    : 0 auto;
+}
+.flex {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+}
+.section-title {
+    margin-bottom : 2rem;
+}
+.section-title span {
+    display : block;
+    color   : white;
+}
+.section-title .ja {
+    font-size : 1.8rem;
+}
+.section-title .en {
+    font-size : 1rem;
+}
+.cursor {
+    cursor : pointer;
+}
+#sp-header {
+    display : none;
+}
+#main .inquiries-area {
+    display : none;
+}
+#main .sp-back-btn {
+    display : none;
+}
+
+/* ローディング */
+#loading {
+    width            : 100vw;
+    height           : 100vh;
+    transition       : all 3s;
+    background-color : rgb(6, 198, 232);
+    position         : fixed;
+    top              : 0;
+    left             : 0;
+}
+.loaded {
+    opacity    : 0;
+    visibility : hidden;
+}
+.spinner {
+    width            : 300px;
+    height           : 300px;
+    margin           : 200px auto;
+    background-color : #fff;
+    border-radius    : 100%;
+    animation        : sk-scaleout 1.0s infinite ease-in-out;
+}
+@keyframes sk-scaleout {
+    0% {
+      transform : scale(0);
+    } 100% {
+      transform : scale(1.0);
+      opacity   : 0;
+    }
+}
+
+/* モーダル */
+#modal {
+    display : none;
+}
+
+/* タブ */
+#main .is-show {
+    display : block;
+}
+#main .tab {
+    flex-grow  : 1;
+    border     : solid 1px #CCC;
+    text-align : center;
+}
+#main .panel {
+    display : none;
+}
+#main .is-active {
+    color: rgb(67, 128, 201);
+}
+#main .panel-group .is-show {
+    display : block;
+}
+#main .panel-group .is-show {
+    display : block;
+
+}
+#main .panel-group .is-show {
+    width            : 100%;
+    padding          : 1rem 0;
+    text-align       : center;
+    border           : solid 1px #CCC;
+    background-color : #fff;
+    color            : rgb(67, 128, 201);
+    font-weight      : 550;
+}
+
+/* アコーディオン */
+.list-box {
+    display : flex;
+}
+.include-accordion {
+    width            : 300px;
+    padding          : 1.5rem;
+    margin-left      : 2rem;
+    margin-bottom    : 2rem;
+    background-color : rgb(67, 128, 201);
+    color            : #fff;
+}
+.include-accordion li {
+    list-style : none;
+}
+.include-accordion li ul {
+    overflow         : hidden;
+    transition       : 0.5s;
+    height           : 0;
+    margin           : 0;
+    border-top       : 1px solid rgb(67, 128, 201);
+    padding          : 0;
+    background-color : rgb(67, 128, 201);
+}
+.include-accordion li ul li {
+    margin-left   : 15px;
+    border-bottom : 1px dotted rgb(67, 128, 201);
+    padding       : 10px 0 10px 10px;
+    color         : #fff;
+}
+.include-accordion:nth-of-type(1) li .active li:last-child {
+    border-bottom : 1px solid rgb(67, 128, 201); 
+}
+button {
+    position         : relative;
+    text-align       : left;
+    cursor           : pointer;
+    width            : 100%;
+    border           : none;
+    padding          : 15px 0 15px 20px;
+    background-color : inherit;
+    color            : #fff;
+    font-size        : 1em;
+}
+button:hover {
+    background-color : rgb(56, 102, 159);
+}
+button::before,
+button::after {
+    content          : "";
+    position         : absolute;
+    top              : 20px;
+    transition       : 0.5s;
+    width            : 1.5px;
+    height           : 8px;
+    background-color : #fff;
+}
+button::before {
+    transform : rotate(-45deg);
+    right     : 35px;
+}
+button::after {
+    transform : rotate(45deg);
+    right     : 30px;
+}
+li.active button::before {
+    transform  : rotate(-135deg);
+    transition : 0.5s;
+}
+li.active button::after {
+    transform  : rotate(135deg);
+    transition : 0.5s;
+}
+ul.active { 
+    overflow-y : auto;
+}
+
+/* ヘッダー */
+#pc-header {
+    height        : 120px;
+    margin-bottom : 3rem;
+}
+#pc-header .logo-area a {
+    color     : #fff;
+    font-size : 3rem;
+}
+#pc-header .nav-area .list {
+    display : flex;
+    gap     : 30px;
+}
+#pc-header .nav-area .list a {
+    color       : gray;
+    font-weight : 550;
+}
+#pc-header .nav-area .list a:hover {
+    color: rgb(0, 132, 255);
+}
+
+/* メイン */
+#main #about-list .flex {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    gap             : 0;
+}
+#main #about-list .list li {
+    width : calc(100%/3);
+}
+#main .list {
+    margin : 0 auto;
+    gap    : 2%;
+}
+#main .list li {
+    height           : 100%;
+    padding          : 1.5rem;
+    background-color : #fff;
+}
+#main .list li .img-area {
+    max-width : 300px;
+}
+#main .list li .img-area img {
+    width         : 100%;
+    border-radius : 150px;
+}
+#main .list li .text-area {
+    text-align : center;
+    margin     : 1.5rem 0;
+}
+#main .list li .title {
+    text-align : center;
+    font-size  : 1.2rem;
+}
+#main .list li .description, .price {
+    font-size   : 0.8rem;
+    font-weight : 550;
+}
+#main .list li .btn-area {
+    text-align : center;
+    font-size  : 1rem;
+}
+#main .list li .btn-area a {
+    padding          : 1rem 2rem;
+    background-color : rgb(255, 242, 54);
+    border-radius    : 25px;
+    font-weight      : 550;
+}
+#main .list .first-card .btn-area a:hover {
+    background-color : rgb(84, 173, 221);
+    color            : #fff;
+}
+#main .list .second-card .btn-area a:hover {
+    background-color : rgb(87, 215, 211);
+    color            : #fff;
+}
+#main .list .third-card .btn-area a:hover {
+    background-color : rgb(244, 156, 236);
+    color            : #fff;
+}
+#main .back-btn-area {
+    text-align : center;
+}
+#main .back-btn-area a {
+    padding          : 1rem 2rem;
+    background-color : #fff;
+    border-radius    : 2rem;
+    color            : rgb(67, 128, 201);
+    font-weight      : 550;
+}
+
+/* フッター */
+#footer {
+    width     : 100%;
+    height    : 30px;
+    margin    : 7rem auto 0;
+    color     : gray;
+}
+#footer .copy {
+    text-align  : center;
+    font-weight : 550;
+    font-size   : 0.6rem;
+}
+
+/* sp画面 */
+@media screen and (max-width :900px) {
+    /* 設定 */
+    .wrapper {
+        padding : 0 2rem;
+    }
+    #main .inquiries-area {
+        display : block;
+        text-align: center;
+        width   : 300px;
+        margin  : 2rem auto;
+    }
+    #main .inquiries-area a {
+        padding          : 0.5rem 1rem;
+        background-color : #fff;
+        color            : black;
+        border-radius    : 16px;
+    }
+    #main .pc-back-btn {
+        display : none;
+    }
+    #main .sp-back-btn {
+        display : block;
+    }
+
+    /* ハンバーガーメニュー */
+    #pc-header {
+        display : none;
+    }
+    #sp-header {
+        display : block;
+    }
+    #sp-header {
+        position         : absolute;
+        top              : 0;
+        left             : 0;
+        display          : flex;
+        justify-content  : space-between;
+        align-items      : center;
+        padding          : 0 5%;
+        width            : calc(100% - 10%);
+        height           : 35px;
+        background-color : white;
+        color            : gray;
+        font-size        : 0.8rem;
+    }
+    #sp-header .sp-header-menu .img-area,
+    #sp-header .checked-sp-header-menu .img-area  {
+        width : 30px;        
+    }
+    #sp-header .img-area img {
+        width  : 100%;
+        height : 100%;
+    }
+    #sp-header .checked-sp-header {
+        display          : flex;
+        justify-content  : space-between;
+        align-items      : center;
+        padding          : 0 5%;
+        width            : calc(100% - 10%);
+        height           : 45px;
+        background-color : white;
+        color            : gray;
+        font-size        : 0.8rem;
+    }
+    #sp-header .sp-header-menu {
+        width : 100%;
+    }
+    #sp-header .checked-sp-header .img-area {
+        width : 15px;        
+    }
+    #sp-header .checked-sp-header .img-area img {
+        width  : 100%;
+        height : 100%;
+    }
+    #sp-header .hamburger-menu {
+        display  : block;
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        width    : 100%;
+        height   : 100%;
+    }
+    #sp-header .hamburger-menu .list {
+        background-color : rgba(0,0,0,0.7);
+    }
+    #sp-header .hamburger-menu .list li {
+        padding    : 1.2rem 0 1.2rem 5%;
+        border-top : 1px solid white;
+        cursor     : pointer;
+    }
+    #sp-header .hamburger-menu .list a {
+        color     : white;
+        font-size : 0.8rem;
+    }
+    #sp-header .menu-btn {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        width           : 100%;
+        height          : 100%;
+    }
+    #sp-header .hamburger-none {
+        position : fixed;
+        top      : -100%;
+    }
+    #sp-header .hamburger-menu {
+        display    : block ;
+        transition : all 0.5s;
+        width      : 100%;
+        height     : 100%;
+    }
+    #sp-header .checked-sp-header-menu {
+        width : 100%;
+    }
+}

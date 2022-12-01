@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsSite</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Modal css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css"/>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Modal js -->
+    <script src="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js" integrity="sha256-e8kfivdhut3LQd71YXKqOdkWAG1JKiOs2hqYJTe0uTk=" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="../js/animate.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/tab.js"></script>
+    <script src="../js/accordion.js"></script>
+    <script src="../js/hamburger.js"></script>
+</head>
+<body>
+    <!-- ローディングアニメーション -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <div id="pc-header" class="wrapper flex">
+            <h1 class="logo-area"><a href="#">Js Site</a></h1>
+            <nav class="nav-area">
+                <ul class="list">
+                    <a href="#" class="transition toggle_switch"><li>ブログ</li></a>
+                    <a href="#" class="transition toggle_switch"><li>書籍</li></a>
+                    <a href="#modal" class="transition open-modal"><li>お問い合わせ</li></a>
+                    <div id="modal">
+                        <h4 class="title">お問い合わせ内容選択</h4>
+                        <p class="description">お困り毎に近いカテゴリを選択してください。</p>
+                        <ul class="list">
+                            <a href="#" id="summary"><li>Js Siteについて</li></a>
+                            <a href="#" id="blog"><li>ブログについて</li></a>
+                            <a href="#" id="book"><li>書籍について</li></a>
+                            <a href="#" id="pay"><li>支払い・返金</li></a>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div id="sp-header" class="sp-header">
+            <nav id="before-header" class="sp-header-menu">
+                <ul class="flex">
+                    <li class="title">
+                        MENU
+                    </li>
+                    <li class="img-area">
+                        <img src="../images/menu.png" alt="">
+                    </li>
+                </ul>
+            </nav>
+            <nav id="hamburger-place" class="hamburger-none hamburger-menu">
+                <ul class="list">
+                    <a href="#"><li>ブログ</li></a>
+                    <a href="#"><li>書籍</li></a>
+                </ul>
+                <div class="checked-sp-header">
+                    <nav class="checked-sp-header-menu">
+                        <ul class="flex">
+                            <li class="title">
+                                MENU
+                            </li>
+                            <li class="img-area">
+                                <img src="../images/menu.png" alt="">
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="wrapper">
+        <section id="about-list">
+            <h2 class="section-title">
+                <span class="ja">概要</span>
+                <span class="en">About List</span>
+            </h2>
+            <ul class="list flex">
+                <li class="first-card about-site tab is-active">
+                    <a class="cursor"><h3 class="title">Js Siteとは</h3></a>
+                </li>
+                <li class="second-card about-blog tab">
+                    <a class="cursor"><h3 class="title">ブログについて</h3></a>
+                </li>
+                <li class="third-card about-book tab">
+                    <a class="cursor"><h3 class="title">書籍について</h3></a>
+                </li>
+            </ul>
+            <div class="panel-group">
+                <div class="panel is-show">
+                    <div class="description-box">
+                        <p class="description">プログラミング初心者向けのサイトです。プログラミングスクールの展開・技術ブログの更新・おすすめ書籍の紹介などをしております。</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="description-box">
+                        <p class="description">プログラミング初心者向けの情報を発信しています。HTML/CSS・JSなどのフロント言語はもちろん、PHPなどバック言語も発信中です。</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="description-box">
+                        <p class="description">プログラミング初心者がまずは読むべき本を弊社のメンターが厳選してご紹介しております。ご自身の学びたい言語に合わせてチョイスしてください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="course-list">
+            <h2 class="section-title">
+                <span class="ja">コース一覧</span>
+                <span class="en">Course List</span>
+            </h2>
+            <ul class="list flex">
+                <li class="first-card">
+                    <div class="img-area">
+                        <img src="../images/first.png" alt="">
+                    </div>
+                    <h3 class="title">初級者コース</h3>
+                    <div class="text-area">
+                        <p class="description">HTML/CSS/jQuery</p>
+                        <p class="price">1980円/月</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">お申し込みはコチラ</a>
+                    </div>
+                </li>
+                <li class="second-card">
+                    <div class="img-area">
+                        <img src="../images/second.png" alt="">
+                    </div>
+                    <h3 class="title">中級者コース</h3>
+                    <div class="text-area">
+                        <p class="description">PHP/Laravel</p>
+                        <p class="price">2980円/月</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">お申し込みはコチラ</a>
+                    </div>
+                </li>
+                <li class="third-card">
+                    <div class="img-area">
+                        <img src="../images/third.png" alt="">
+                    </div>
+                    <h3 class="title">上級者コース</h3>
+                    <div class="text-area">
+                        <p class="description">GO/Python</p>
+                        <p class="price">3980円/月</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">お申し込みはコチラ</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="Article-list">
+            <h2 class="section-title">
+                <span class="ja">記事一覧</span>
+                <span class="en">Article List</span>
+            </h2>
+            <div class="list-box">
+                <ul class="include-accordion scroll-control">
+                    <li>
+                        <button class="accordionBtn" type="button">HTML/CSS</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="accordionBtn" type="button">Javascript</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="include-accordion scroll-control">
+                    <li>
+                        <button class="accordionBtn" type="button">PHP</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="accordionBtn" type="button">Ruby</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="include-accordion scroll-control">
+                    <li>
+                        <button class="accordionBtn" type="button">GO</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="accordionBtn" type="button">Python</button>
+                        <ul>
+                            <a href="#"><li>入門編</li></a>
+                            <a href="#"><li>初級編</li></a>
+                            <a href="#"><li>中級編</li></a>
+                            <a href="#"><li>上級編</li></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="Recommend Books">
+            <h2 class="section-title">
+                <span class="ja">おすすめ書籍</span>
+                <span class="en">Recommend Books</span>
+            </h2>
+            <ul class="list flex">
+                <li class="first-card">
+                    <div class="img-area">
+                        <img src="../images/html-book.png" alt="">
+                    </div>
+                    <div class="text-area">
+                        <p class="description">HTML/CSS入門</p>
+                        <p class="price">1650円</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">Amazonで購入</a>
+                    </div>
+                </li>
+                <li class="second-card">
+                    <div class="img-area">
+                        <img src="../images/vue-book.png" alt="">
+                    </div>
+                    <div class="text-area">
+                        <p class="description">vue.js入門</p>
+                        <p class="price">3980円</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">Amazonで購入</a>
+                    </div>
+                </li>
+                <li class="third-card">
+                    <div class="img-area">
+                        <img src="../images/laravel-book.png" alt="">
+                    </div>
+                    <div class="text-area">
+                        <p class="description">Laravel入門</p>
+                        <p class="price">2980円</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="#" class="transition">Amazonで購入</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="inquiries-area">
+            <a href="#">お問い合わせはコチラ</a>
+        </div>
+        <div class="back-btn-area pc-back-btn">
+            <a href="#pc-header">TOPへ</a>
+        </div>
+        <div class="back-btn-area sp-back-btn">
+            <a href="#sp-header">TOPへ</a>
+        </div>
+    </main>
+    <footer id="footer">
+        <p class="copy">Copyright &copy; 2022 Maekawa All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
